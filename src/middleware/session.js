@@ -6,16 +6,15 @@ const ONE_DAY = 86400000;
 
 const sessionMiddleware = session({
     secret: process.env.SESSION_SECRET || crypto.randomBytes(64).toString('hex'),
-    resave: true,
+    resave: false,
     saveUninitialized: true,
     store: new MemoryStore({
         checkPeriod: ONE_DAY
     }),
     cookie: { 
-        secure: process.env.NODE_ENV === 'production',
+        secure: false,
         httpOnly: true,
         maxAge: ONE_DAY,
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
     }
 });
 
