@@ -14,7 +14,7 @@ router.get('/mal', (req, res) => {
             return res.status(500).send('Error initializing authentication');
         }
         const codeChallenge = generateCodeChallenge(codeVerifier);
-        const authUrl = new URL('https://myanimelist.net/dialog/oauth');
+        const authUrl = new URL('https://myanimelist.net/v1/oauth2/authorize');
         authUrl.searchParams.append('response_type', 'code');
         authUrl.searchParams.append('client_id', config.mal.clientId);
         authUrl.searchParams.append('code_challenge', codeChallenge);
