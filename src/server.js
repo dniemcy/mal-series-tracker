@@ -19,9 +19,10 @@ const corsOptions = {
 };
 
 app.use(express.json());
+app.use(sessionMiddleware);
 app.use(cors(corsOptions));
 app.use(express.static('public'));
-app.use(sessionMiddleware);
+
 
 app.use('/api/user', animeRoutes.authenticatedRoutes);
 app.use('/api/anime', animeRoutes.publicRoutes);

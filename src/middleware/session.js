@@ -6,7 +6,7 @@ const ONE_DAY = 86400000;
 
 const sessionMiddleware = session({
     secret: process.env.SESSION_SECRET || crypto.randomBytes(64).toString('hex'),
-    resave: false,
+    resave: true,
     saveUninitialized: true,
     store: new MemoryStore({
         checkPeriod: ONE_DAY
