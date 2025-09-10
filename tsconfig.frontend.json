@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./public/js-compiled",
+    "rootDir": "./public/js",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"]
+  },
+  "include": ["public/js/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

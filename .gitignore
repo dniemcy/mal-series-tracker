@@ -19,6 +19,10 @@ pids
 *.seed
 *.pid.lock
 
+# Build output
+dist/
+public/js-compiled/
+
 # Optional npm cache directory
 .npm
 
