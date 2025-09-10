@@ -12,27 +12,30 @@ Organize and track anime series from MyAnimeList with automatic sequel grouping 
 
 ## Built With
 - Node.js/Express.js - Backend server and API handling
-- JavaScript - Frontend functionality and series grouping
+- Typescript - Frontend functionality and series grouping
 - HTML/CSS - Structure and styling
 - MyAnimeList API - Data source and authentication
 
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/anime-list-plus.git
+git clone https://github.com/dniemcy/mal-series-tracker.git
 
-# Navigate to directory
-cd anime-list-plus
+# Navigate to the project directory
+cd mal-series-tracker
 
 # Install dependencies
 npm install
 
-# Create .env file with required variables:
+# Create a .env file in the root and add the following variables:
 MAL_CLIENT_ID=your_client_id
 MAL_CLIENT_SECRET=your_client_secret
 BASE_URL=http://localhost:3000
 SESSION_SECRET=your_session_secret
 PORT=3000
+
+# Build the project (compile TypeScript to JavaScript)
+npm run build
 
 # Start the server
 npm start
